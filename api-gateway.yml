@@ -5,6 +5,19 @@ server:
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - "POST"
+              - "GET"
+              - "PUT"
+              - "DELETE"
+              - "OPTIONS"
+
+            allowedHeaders: "**"
+
       routes:
         - id: auth-service-route
           uri: lb://AUTH-SERVICE
