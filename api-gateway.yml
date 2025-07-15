@@ -30,3 +30,8 @@ spring:
               uri: lb://PATIENT-SERVICE
               predicates:
                 - Path=/api/v1/patients/**
+
+            - id: produto-service-route
+              uri: lb://PRODUTO-SERVICE
+              predicates:
+                - Path=/api/v1/produto/**
