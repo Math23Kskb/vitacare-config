@@ -35,3 +35,13 @@ spring:
               uri: lb://PRODUTO-SERVICE
               predicates:
                 - Path=/api/v1/produto/**
+
+            - id: professional-service-route
+              uri: lb://PROFESSIONAL-SERVICE
+              predicates:
+                - Path=/api/v1/professionals/**
+
+            - id: agenda-service-route
+              uri: lb://agenda-SERVICE
+              predicates:
+                - Path=/api/v1/agendamentos/**
