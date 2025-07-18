@@ -61,14 +61,8 @@ spring:
               predicates:
                 - Path=/api/v1/planos/**
 
-            - id: paciente-query-route
-              uri: lb://PACIENTE-CONSULTA-SERVICE
-              predicates:
-                - Path=/api/v1/pacientes/**
-                - Method=GET
-
             - id: paciente-command-route
               uri: lb://PACIENTE-COMANDO-SERVICE
               predicates:
                 - Path=/api/v1/pacientes/**
-                - Method=POST,PUT,PATCH,DELETE
+                - Method=GET,POST,PUT,PATCH,DELETE
