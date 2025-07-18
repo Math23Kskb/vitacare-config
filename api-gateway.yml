@@ -50,3 +50,25 @@ spring:
               uri: lb://AGENDA-SERVICE
               predicates:
                 - Path=/api/v1/agendamentos/**
+
+            - id: convenios-route
+              uri: lb://CONVENIO-SERVICE
+              predicates:
+                - Path=/api/v1/convenios/**
+
+            - id: planos-route
+              uri: lb://CONVENIO-SERVICE
+              predicates:
+                - Path=/api/v1/planos/**
+
+            - id: paciente-query-route
+              uri: lb://PACIENTE-CONSULTA-SERVICE
+              predicates:
+                - Path=/api/v1/pacientes/**
+                - Method=GET
+
+            - id: paciente-command-route
+              uri: lb://PACIENTE-COMANDO-SERVICE
+              predicates:
+                - Path=/api/v1/pacientes/**
+                - Method=POST,PUT,PATCH,DELETE
