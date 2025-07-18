@@ -61,6 +61,7 @@ spring:
               predicates:
                 - Path=/api/v1/planos/**
 
+
             - id: paciente-command-route
               uri: lb://PACIENTE-COMANDO-SERVICE
               predicates:
