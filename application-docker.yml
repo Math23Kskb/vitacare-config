@@ -1,0 +1,26 @@
+# =======================================================
+# GLOBAL DOCKER PROFILE - SINGLE POSTGRES INSTANCE
+# =======================================================
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/vitacare_db
+    username: vitacareuser
+    password: vitacarepassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  flyway:
+    create-schemas: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka
+
+logging:
+  level:
+    org.vitacare: DEBUG

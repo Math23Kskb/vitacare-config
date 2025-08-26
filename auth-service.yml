@@ -1,0 +1,31 @@
+# ==================================
+# CONFIGURAÇÃO AUTH-SERVICE
+# ==================================
+server:
+  port: 8090
+
+# JWT configuration
+jwt:
+  secret: yP2dT58Ffit+vWciSR4WP+qsC/y3zXFzu8jgzt2Oagc8VaW0oxCtV8i4Pm41jDPpflT9wL9RUQ0onDW5B6SkeA==
+  expiration:
+    ms: 1800000
+  refresh-token:
+    expiration:
+      ms: 604800000
+
+# Email configuration (Gmail)
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${VITACARE_GMAIL_USERNAME}
+    password: ${VITACARE_GMAIL_APP_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.trust: smtp.gmail.com
+
+# Logging (default)
+logging:
+  level:
+    org.vitacare.authservice: DEBUG

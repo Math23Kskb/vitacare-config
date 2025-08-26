@@ -1,0 +1,8 @@
+# ==========================================================
+# GLOBAL DEFAULT CONFIG (applies to all profiles)
+# ==========================================================
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

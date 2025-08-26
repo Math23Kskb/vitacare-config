@@ -1,0 +1,26 @@
+# =======================================================
+# GLOBAL LOCAL PROFILE - SINGLE POSTGRES INSTANCE
+# =======================================================
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vitacare_db
+    username: vitacareuser
+    password: vitacarepassword
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    org.vitacare: DEBUG
