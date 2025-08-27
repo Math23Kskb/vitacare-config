@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/vitacare_db
-    username: vitacare_user
-    password: vitacare_password
+    username: vitacareuser
+    password: vitacarepassword
 
   jpa:
     hibernate:

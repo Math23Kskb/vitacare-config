@@ -1,3 +1,21 @@
-spring.jpa.properties.hibernate.default_schema=auth_service
-spring.flyway.enabled=true
-spring.flyway.schemas=auth_service
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vitacare_db
+    username: vitacareuser
+    password: vitacarepassword
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: auth_schema
+
+  flyway:
+    enabled: true
+    schemas: auth_schema
+    baseline-on-migrate: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
