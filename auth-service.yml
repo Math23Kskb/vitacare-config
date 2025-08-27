@@ -1,5 +1,5 @@
 # ==================================
-# CONFIGURAÇÃO AUTH-SERVICE
+# CONFIGURACAO AUTH-SERVICE
 # ==================================
 server:
   port: 8090
