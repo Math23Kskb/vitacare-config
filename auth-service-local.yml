@@ -2,7 +2,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/vitacare_db
     username: vitacareuser
-    password: vitacarepassword
+    password: vitacarepa
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
