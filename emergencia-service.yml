@@ -4,6 +4,25 @@
 server:
   port: 8082
 
+spring:
+  application:
+    name: emergencia-service
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: emergencia_schema
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  flyway:
+    enabled: true
+    schemas: emergencia_schema
+    create-schemas: true
+    baseline-on-migrate: true
+
 # JWT configuration
 jwt:
   secret: yP2dT58Ffit+vWciSR4WP+qsC/y3zXFzu8jgzt2Oagc8VaW0oxCtV8i4Pm41jDPpflT9wL9RUQ0onDW5B6SkeA==

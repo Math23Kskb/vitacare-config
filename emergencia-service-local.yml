@@ -4,19 +4,3 @@ spring:
     username: vitacareuser
     password: vitacarepa
     driver-class-name: org.postgresql.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    properties:
-      hibernate:
-        default_schema: emergencia_schema
-
-  flyway:
-    enabled: true
-    schemas: emergencia_schema
-    baseline-on-migrate: true
-
-logging:
-  level:
-    org.hibernate.SQL: DEBUG
