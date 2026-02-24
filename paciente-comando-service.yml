@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/vitacare_db
+    username: vitacareuser
+    password: vitacarepassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: paciente_comando_schema
+
+  flyway:
+    enabled: true
+    schemas: paciente_comando_schema
+    baseline-on-migrate: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
