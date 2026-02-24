@@ -1,3 +1,18 @@
+# ==================================
+# CONFIGURACAO PACIENTE-COMANDO-SERVICE
+# ==================================
+server:
+  port: 8087
+
+# JWT configuration
+jwt:
+  secret: yP2dT58Ffit+vWciSR4WP+qsC/y3zXFzu8jgzt2Oagc8VaW0oxCtV8i4Pm41jDPpflT9wL9RUQ0onDW5B6SkeA==
+  expiration:
+    ms: 1800000
+  refresh-token:
+    expiration:
+      ms: 604800000
+
 spring:
   datasource:
     url: jdbc:postgresql://postgres-db:5432/vitacare_db
