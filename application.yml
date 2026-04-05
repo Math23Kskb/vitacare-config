@@ -2,6 +2,10 @@
 # GLOBAL DEFAULT CONFIG (applies to all profiles)
 # ==========================================================
 
+spring:
+  profiles:
+    active: local
+
 eureka:
   client:
     service-url:
