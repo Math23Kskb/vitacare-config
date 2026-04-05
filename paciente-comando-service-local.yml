@@ -15,10 +15,10 @@ jwt:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/vitacare_db
+    url: jdbc:sqlserver://localhost:1433;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
     username: vitacareuser
-    password: vitacarepassword
-    driver-class-name: org.postgresql.Driver
+    password: vitacarepa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:
     hibernate:
