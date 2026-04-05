@@ -16,7 +16,6 @@ spring:
 
   flyway:
     enabled: true
-    schemas: auth_schema
     baseline-on-migrate: true
 
 logging:

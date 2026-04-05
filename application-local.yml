@@ -27,7 +27,6 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
-    schemas: auth_schema
 
 eureka:
   client:
