@@ -1,7 +1,10 @@
-# ==========================================================
-# GLOBAL DEFAULT CONFIG (applies to all profiles)
-# ==========================================================
-
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: local
+  config:
+    import: "optional:configserver:http://localhost:8888"
 
 eureka:
   client:
