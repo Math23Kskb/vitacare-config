@@ -1,8 +1,14 @@
 # =======================================================
-# GLOBAL LOCAL PROFILE - SINGLE POSTGRES INSTANCE
+# GLOBAL LOCAL PROFILE - SINGLE SQL SERVER INSTANCE
 # =======================================================
 
 spring:
+  application:
+    name: auth-service
+
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
     username: vitacareuser
@@ -11,7 +17,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
@@ -21,6 +27,7 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
+    schemas: auth_schema
 
 eureka:
   client:
