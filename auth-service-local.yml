@@ -1,16 +1,18 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/vitacare_db
+    url: jdbc:sqlserver://localhost:1433;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
     username: vitacareuser
     password: vitacarepa
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
+    show-sql: true
     properties:
       hibernate:
-        default_schema: auth_schema
+        dialect: org.hibernate.dialect.SQLServerDialect
+        format_sql: true
 
   flyway:
     enabled: true
