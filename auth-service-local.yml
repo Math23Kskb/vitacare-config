@@ -1,6 +1,8 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://;serverName=(localdb)\MSSQLLocalDB;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
+    url: jdbc:sqlserver://localhost:1433;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
+    username: vitacareuser
+    password: vitacarepa
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:
