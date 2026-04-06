@@ -10,9 +10,7 @@ spring:
     import: "optional:configserver:http://localhost:8888"
 
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
-    username: vitacareuser
-    password: vitacarepa
+    url: jdbc:sqlserver://;serverName=(localdb)\MSSQLLocalDB;databaseName=vitacare_db;encrypt=true;trustServerCertificate=true
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   jpa:
